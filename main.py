@@ -29,11 +29,7 @@ while True:
 
                 landmarks.append([lmx, lmy])
 
-            print(landmarks)
             mpDraw.draw_landmarks(frame, handslms, mpHands.HAND_CONNECTIONS)
-
-
-    print(className)
 
     cv2.imshow("Output", frame) 
 
