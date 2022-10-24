@@ -1,8 +1,8 @@
-# EyeChess
-Ajedrez con los ojos
+# HandChess
+Ajedrez con las manos
 
 ## Proceso
-#### Idea
-Crear un ajedrez que se puede jugar con los ojos, con una buena detección de pupilas a través de OpenCV y Python. Un set de instrucciones de movimientos predefinidos.
+### Idea
+Crear un ajedrez que se puede jugar con gestos de las manos a través de Python con los módulos OpenCV, Tensorflow y MediaPipe. Un set de instrucciones de movimientos predefinidos detectados por una inteligencia artificial.
 
-**¿Por qué?**: La idea viene del sistema que usaba Stephen Hawking para hablar que desarrolló Intel. 
+### Creación
