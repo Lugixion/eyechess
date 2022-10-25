@@ -6,6 +6,25 @@ mpHands = mp.solutions.hands
 hands = mpHands.Hands(max_num_hands=1, min_detection_confidence=0.7)
 mpDraw = mp.solutions.drawing_utils
 
+keys = {
+    49: "1",
+    50: "2",
+    51: "3",
+    52: "4",
+    53: "5",
+    97: "a",
+    98: "b",
+    99: "c",
+    100: "d",
+    101: "e",
+    102: "f",
+    103: "g",
+    104: "h",
+    110: "n",
+    111: "o",
+    113: "q"
+}
+
 cap = cv2.VideoCapture(0)
 
 ftw = open("data","a")
@@ -33,60 +52,14 @@ while True:
 
             mpDraw.draw_landmarks(frame, handslms, mpHands.HAND_CONNECTIONS)
 
-
-    cv2.imshow("Output", frame) 
-
     k = cv2.waitKey(1)
 
-    if k in ['q','1','2','']:
-        break
-
-    if cv2.waitKey(1)  == ord('1'):
-        landmarks.append(1)
-        ftw.write(str(landmarks)+"\n")
-    elif cv2.waitKey(1)  == ord('2'):
-        landmarks.append(2)
-        ftw.write(str(landmarks)+"\n")
-    elif cv2.waitKey(1)  == ord('3'):
-        landmarks.append(3)
-        ftw.write(str(landmarks)+"\n")
-    elif cv2.waitKey(1)  == ord('4'):
-        landmarks.append(4)
-        ftw.write(str(landmarks)+"\n")
-    elif cv2.waitKey(1)  == ord('5'):
-        landmarks.append(5)
-        ftw.write(str(landmarks)+"\n")
-    elif cv2.waitKey(1)  == ord('a'):
-        landmarks.append(6)
-        ftw.write(str(landmarks)+"\n")
-    elif cv2.waitKey(1)  == ord('b'):
-        landmarks.append(7)
-        ftw.write(str(landmarks)+"\n")
-    elif cv2.waitKey(1)  == ord('c'):
-        landmarks.append(8)
-        ftw.write(str(landmarks)+"\n")
-    elif cv2.waitKey(1)  == ord('d'):
-        landmarks.append(9)
-        ftw.write(str(landmarks)+"\n")
-    elif cv2.waitKey(1)  == ord('e'):
-        landmarks.append(10)
-        ftw.write(str(landmarks)+"\n")
-    elif cv2.waitKey(1)  == ord('f'):
-        landmarks.append(11)
-        ftw.write(str(landmarks)+"\n")
-    elif cv2.waitKey(1)  == ord('g'):
-        landmarks.append(12)
-        ftw.write(str(landmarks)+"\n")
-    elif cv2.waitKey(1)  == ord('h'):
-        landmarks.append(13)
-        ftw.write(str(landmarks)+"\n")
-    elif cv2.waitKey(1)  == ord('o'):
-        landmarks.append(14)
-        ftw.write(str(landmarks)+"\n")
-    elif cv2.waitKey(1)  == ord('n'):
-        landmarks.append(15)
+    if k in keys.keys():
+        if k == 113: break
+        landmarks.append(list(keys.keys()).index(k))
         ftw.write(str(landmarks)+"\n")
 
+    cv2.imshow("Output", frame) 
     
 cap.release()
 
