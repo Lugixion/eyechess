@@ -38,7 +38,7 @@ def get_args():
     return args
 
 
-def main():
+def maincv():
     # Argument parsing #################################################################
     args = get_args()
 
@@ -185,12 +185,12 @@ def select_mode(key, mode):
     number = -1
     if 48 <= key <= 57:  # 0 ~ 9
         number = key - 48
+    elif 97 <= key <= 104:
+        number = key - 97 + 6
     if key == 110:  # n
         mode = 0
     if key == 107:  # k
         mode = 1
-    if key == 104:  # h
-        mode = 2
     return number, mode
 
 
@@ -540,4 +540,4 @@ def draw_info(image, fps, mode, number):
 
 
 if __name__ == '__main__':
-    main()
+    maincv()

@@ -1,7 +1,5 @@
 import pygame
-
 import time
-
 import sys
 
 board = [['  ' for i in range(8)] for i in range(8)]
@@ -13,7 +11,6 @@ class Piece:
         self.type = type
         self.killable = killable
         self.image = image
-
 
 ## Creates instances of chess pieces, so far we got: pawn, king, rook and bishop
 ## The first parameter defines what team its on and the second, what type of piece it is
