@@ -22,3 +22,6 @@ Para entrenar la inteligencia artificial, cuando señales que estás haciendo un
 · **Conexión con un juego**<br>
 Para conectarlo con el juego de ajedrez he optado por detectar qué gesto estás haciendo y guardarlo para luego mandarlo por TCP localmente, así se puede tener un buen sistema asíncrono de comunicación. El único problema es que PyGame no permite ese tipo de conexiones pues deja de responder.
 La conexión se puede hacer por el puerto 5555 en localhost
+
+### Finalidad
+La finalidad de este proyecto es demostrar las posibilidades que hay en diferentes módulos de inteligencia artificial, de este proyecto se podrían crear muchas cosas más como traductores de lenguaje de signos a texto y viceversa. Y también que el ajedrez mola, aunque esto podría servir para el Doom.
